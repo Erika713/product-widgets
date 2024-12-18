@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+
+/**
+ * This injects Tailwind's base styles and any base styles registered by
+ * plugins.
+ */
+@tailwind base;
+
+/**
+ * This injects Tailwind's component classes and any component classes
+ * registered by plugins.
+ */
+@tailwind components;
+
+/**
+ * This injects Tailwind's utility classes and any utility classes registered
+ * by plugins.
+ */
+@tailwind utilities;
+
+body {
+  @apply font-primary;
+}
+
+@layer base {
+  /* Typography Styles */
+  h3 {
+    @apply text-[30px] font-bold;
+  }
+
+  .typo-lg {
+    @apply text-[17.86px];
+  }
+  .typo-sm {
+    @apply text-[14px];
+  }
+  .typo-xs {
+    @apply text-[12.41px];
+  }
+
+  .typo-link {
+    @apply cursor-pointer text-[14px] font-bold hover:underline;
+  }
+
+  /* Hover Effects */
+  .color-option {
+    @apply transition-opacity duration-200; /* Smooth transition */
+  }
+  .color-option:hover {
+    opacity: 0.8;
+  }
+}
